@@ -7,7 +7,7 @@ function App() {
 
   const addUserHandler = (userName, userAge) => {
     setUsersList((prevUserList) => {
-      return [...prevUserList, {name: userName, age: userAge}];
+      return [...prevUserList, {name: userName, age: userAge, id: Math.random().toString()}];
     });
   };
 
