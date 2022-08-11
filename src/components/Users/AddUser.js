@@ -31,6 +31,10 @@ const AddUser = (props) => {
             return;
         }
         props.onAddUser(enteredName, enteredAge);
+        // usually should not do - but ok for resetting input values
+        // manipulates DOM directly without using React
+        nameInputRef.current.value = '';
+        ageInputRef.current.value = '';
     };
 
     const errorHandler = () => {
